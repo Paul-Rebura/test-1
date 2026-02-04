@@ -20,5 +20,8 @@ resource "aws_sns_topic" "pipeline-2" {
   name = "pipeline-2-topic-${var.env}"
   tags = {
     Environment = var.env
+    pipeline    = "pipeline-2-${var.env}"
+    owner       = "team-b-${var.env}"
+    deployed    = "terraform"
   }
 }
